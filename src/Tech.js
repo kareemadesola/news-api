@@ -1,9 +1,9 @@
 import React from "react";
 import { useFetch } from "./useFetch";
 
-const FINANCE_URL = `https://newsapi.org/v2/everything?q=finance&apiKey=${process.env.REACT_APP_SECRET_KEY}`;
-const Finance = () => {
-  const { loading, news } = useFetch(FINANCE_URL);
+const TECH_URL = `https://newsapi.org/v2/everything?q=tech&apiKey=${process.env.REACT_APP_SECRET_KEY}`;
+const Tech = () => {
+  const { loading, news } = useFetch(TECH_URL);
   return loading ? (
     <div>Loading</div>
   ) : (
@@ -13,4 +13,4 @@ const Finance = () => {
   );
 };
 
-export default Finance;
+export default Tech;
