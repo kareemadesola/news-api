@@ -8,7 +8,7 @@ import Finance from "./Finance";
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/tech" element={<Technology />} />
         <Route path="/finance" element={<Finance />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 
