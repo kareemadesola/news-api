@@ -1,17 +1,16 @@
 import React from "react";
 import { useFetch } from "./useFetch";
 
-const home_url =
-  "https://newsapi.org/v2/top-headlines?country=ng&apiKey=22b6925047bd45039f93b7ee85ccb6f0";
+const HOME_URL = `https://newsapi.org/v2/top-headlines?country=ng&apiKey=${process.env.REACT_APP_SECRET_KEY}`;
 const Home = () => {
-  const { loading, news } = useFetch(home_url);
+  const { loading, news } = useFetch(HOME_URL);
   console.log(news);
 
   return loading ? (
     <div>Loading</div>
   ) : (
     news?.articles?.map((article) => {
-      return <p> {article.title}</p>;
+      return <p> {article.author}</p>;
     })
   );
 };
