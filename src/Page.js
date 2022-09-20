@@ -6,18 +6,15 @@ const Page = ({ news }) => {
   return (
     <>
       <Container fluid>
-        {news?.articles?.map((article) => {
-          return (
-            <Row className="py-2 px-1">
-              <Col md={6}>
-                {/*<div style={{ display: "flex" }} className="col-md-6">*/}
+        <Row className="py-2 px-1">
+          {news?.articles?.map((article) => {
+            return (
+              <Col sm={6} md={4} xxl={3}>
                 <NewsItem key={article.publishedAt} {...article} />
-
-                {/*</div>*/}
               </Col>
-            </Row>
-          );
-        })}
+            );
+          })}
+        </Row>
       </Container>
     </>
   );

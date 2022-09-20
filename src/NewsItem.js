@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 function NewsItem({
   author,
@@ -22,7 +22,6 @@ function NewsItem({
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        {/*<Button variant="primary">More</Button>*/}
       </Card.Body>
     </Card>
   );
