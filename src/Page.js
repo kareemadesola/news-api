@@ -9,7 +9,7 @@ const Page = ({ news }) => {
         <Row className="py-2 px-1">
           {news?.articles?.map((article) => {
             return (
-              <Col sm={6} md={4} xxl={3}>
+              <Col sm={6} md={4} xxl={3} className="p-1">
                 <NewsItem key={article.publishedAt} {...article} />
               </Col>
             );
