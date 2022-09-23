@@ -7,10 +7,10 @@ const Page = ({ news }) => {
     <>
       <Container fluid>
         <Row className="py-2 px-1">
-          {news?.articles?.map((article) => {
+          {news?.results?.map((article) => {
             return (
               <Col sm={6} md={4} xxl={3} className="p-1">
-                <NewsItem key={article.publishedAt} {...article} />
+                <NewsItem key={article.pubDate} {...article} />
               </Col>
             );
           })}

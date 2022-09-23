@@ -1,22 +1,13 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-function NewsItem({
-  author,
-  title,
-  description,
-  url,
-  urlToImage,
-  publishedAt,
-  content,
-}) {
+function NewsItem({ title, description, image_url }) {
   return (
     <Card>
       <Card.Img
         variant="top"
         src={
-          urlToImage ||
-          "https://mdbootstrap.com/img/Photos/Others/images/76.jpg"
+          image_url || "https://mdbootstrap.com/img/Photos/Others/images/76.jpg"
         }
       />
       <Card.Body>
