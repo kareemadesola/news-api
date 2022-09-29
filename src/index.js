@@ -3,38 +3,37 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "./Navigation";
 import Home from "./Home";
 import Sports from "./Sports";
 import Tech from "./Tech";
 
 import Finance from "./Finance";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const Wrapper = ({ component }) => (
-  <>
-    <Navigation />
-    {component}
-  </>
-);
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Wrapper component={<Home />} />,
-  },
-  {
-    path: "sports",
-    element: <Wrapper component={<Sports />} />,
-  },
-  {
-    path: "tech",
-    element: <Wrapper component={<Tech />} />,
-  },
-  {
-    path: "finance",
-    element: <Wrapper component={<Finance />} />,
+    element: <App />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "sports",
+        element: <Sports />,
+      },
+      {
+        path: "tech",
+        element: <Tech />,
+      },
+      {
+        path: "finance",
+        element: <Finance />,
+      },
+    ],
   },
 ]);
 root.render(
