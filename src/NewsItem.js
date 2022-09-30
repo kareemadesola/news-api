@@ -7,7 +7,6 @@ const NewsItem = ({ title, description, image_url, link }) => {
       onClick={() => {
         window.location = link;
       }}
-      style={{ cursor: "pointer" }}
       className="card"
     >
       <Card.Img
