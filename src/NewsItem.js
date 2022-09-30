@@ -2,12 +2,13 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 const NewsItem = ({ title, description, image_url, link }) => {
-  function onClick() {
-    // eslint-disable-next-line no-restricted-globals
-    location.replace(link);
-  }
   return (
-    <Card onClick={onClick} style={{ cursor: "pointer" }}>
+    <Card
+      onClick={() => {
+        window.location = link;
+      }}
+      style={{ cursor: "pointer" }}
+    >
       <Card.Img
         variant="top"
         src={
