@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-
+import "./index.css";
 const NewsItem = ({ title, description, image_url, link }) => {
   return (
     <Card
@@ -8,6 +8,7 @@ const NewsItem = ({ title, description, image_url, link }) => {
         window.location = link;
       }}
       style={{ cursor: "pointer" }}
+      className="card"
     >
       <Card.Img
         variant="top"
